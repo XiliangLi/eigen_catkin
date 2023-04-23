@@ -1,3 +1,4 @@
+# covins_patched
 cmake_minimum_required(VERSION 2.8.3)
 project(eigen_catkin)
 
@@ -44,6 +45,7 @@ if(USE_SYSTEM_EIGEN STREQUAL "AUTO")
   endif()
 endif()
 
+set(USE_SYSTEM_EIGEN "OFF")
 if(USE_SYSTEM_EIGEN)
   message(STATUS "eigen_catkin is configured to USE system eigen")
   if(EXISTS ${EIGEN_CATKIN_EIGEN_INCLUDE_SIGNATURE})
